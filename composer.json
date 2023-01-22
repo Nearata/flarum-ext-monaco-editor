@@ -1,0 +1,35 @@
+{
+    "name": "nearata/flarum-ext-monaco-editor",
+    "description": "Monaco Editor integration for Flarum",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "Unlicense",
+    "require": {
+        "flarum/core": "^1.6.0"
+    },
+    "authors": [
+        {
+            "name": "Nearata",
+            "email": "nearata@protonmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nearata\\MonacoEditor\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Monaco Editor",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-newspaper",
+                "color": "#fff",
+                "backgroundColor": "#000"
+            }
+        }
+    }
+}
