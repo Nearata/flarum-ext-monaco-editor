@@ -1,4 +1,5 @@
 import MonacoEditor from "./components/MonacoEditor";
+import MonacoEditorState from "./states/MonacoEditorState";
 import app from "flarum/admin/app";
 import EditCustomCssModal from "flarum/admin/components/EditCustomCssModal";
 import EditCustomFooterModal from "flarum/admin/components/EditCustomFooterModal";
@@ -31,20 +32,22 @@ app.initializers.add("nearata-monaco-editor", () => {
 
         textarea.style.display = "none";
 
+        const state = new MonacoEditorState(language, setting);
+
         m.mount(container, {
-            view: () => m(MonacoEditor, { language, setting }),
+            view: () => m(MonacoEditor, { state, language, setting }),
         });
     };
 
-    extend(EditCustomHeaderModal.prototype, "form", function (vnode) {
+    extend(EditCustomHeaderModal.prototype, "oncreate", function (vnode) {
         mountMonacoEditor(this.element, "html", this.setting("custom_header"));
     });
 
-    extend(EditCustomFooterModal.prototype, "form", function (vnode) {
+    extend(EditCustomFooterModal.prototype, "oncreate", function (vnode) {
         mountMonacoEditor(this.element, "html", this.setting("custom_footer"));
     });
 
-    extend(EditCustomCssModal.prototype, "form", function (vnode) {
+    extend(EditCustomCssModal.prototype, "oncreate", function (vnode) {
         mountMonacoEditor(this.element, "less", this.setting("custom_less"));
     });
 });
