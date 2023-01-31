@@ -21,7 +21,3 @@ php flarum cache:clear
 composer remove nearata/flarum-ext-monaco-editor
 php flarum cache:clear
 ```
-
-## Links
-
-- [Packagist](https://packagist.org/packages/nearata/flarum-ext-monaco-editor)
