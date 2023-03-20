@@ -21,3 +21,11 @@ php flarum cache:clear
 composer remove nearata/flarum-ext-monaco-editor
 php flarum cache:clear
 ```
+
+## How to use
+
+This adds Monaco Editor to:
+
+- Custom Header modal
+- Custom Footer modal
+- Custom CSS modal
