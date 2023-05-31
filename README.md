@@ -2,6 +2,10 @@
 
 > Monaco Editor integration
 
+## Screenshots
+
+See the [screenshots](screenshots) subfolder.
+
 ## Install
 
 ```sh
