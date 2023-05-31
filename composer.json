@@ -1,13 +1,13 @@
 {
     "name": "nearata/flarum-ext-monaco-editor",
-    "description": "Monaco Editor integration for Flarum",
+    "description": "Monaco Editor integration",
     "keywords": [
         "flarum"
     ],
     "type": "flarum-extension",
     "license": "Unlicense",
     "require": {
-        "flarum/core": "^1.6.0"
+        "flarum/core": "^1.7"
     },
     "authors": [
         {
@@ -28,7 +28,7 @@
             "icon": {
                 "name": "fas fa-newspaper",
                 "color": "#fff",
-                "backgroundColor": "#000"
+                "backgroundColor": "#6C91C2"
             }
         }
     }

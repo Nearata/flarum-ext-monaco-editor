@@ -35,19 +35,19 @@ app.initializers.add("nearata-monaco-editor", () => {
         const state = new MonacoEditorState(language, setting);
 
         m.mount(container, {
-            view: () => m(MonacoEditor, { state, language, setting }),
+            view: () => <MonacoEditor state={state} />,
         });
     };
 
-    extend(EditCustomHeaderModal.prototype, "oncreate", function (vnode) {
+    extend(EditCustomHeaderModal.prototype, "oncreate", function (_) {
         mountMonacoEditor(this.element, "html", this.setting("custom_header"));
     });
 
-    extend(EditCustomFooterModal.prototype, "oncreate", function (vnode) {
+    extend(EditCustomFooterModal.prototype, "oncreate", function (_) {
         mountMonacoEditor(this.element, "html", this.setting("custom_footer"));
     });
 
-    extend(EditCustomCssModal.prototype, "oncreate", function (vnode) {
+    extend(EditCustomCssModal.prototype, "oncreate", function (_) {
         mountMonacoEditor(this.element, "less", this.setting("custom_less"));
     });
 });

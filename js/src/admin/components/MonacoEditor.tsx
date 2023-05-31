@@ -25,11 +25,11 @@ export default class MonacoEditor extends Component {
         super.oncreate(vnode);
 
         addResources().then(() => {
-            this.attrs.state.render(this.element);
+            vnode.attrs.state!.render(this.element);
         });
     }
 
-    view(vnode: Mithril.Vnode<this>) {
+    view(_: Mithril.Vnode<this>) {
         return <div class="NearataMonacoEditor" />;
     }
 }

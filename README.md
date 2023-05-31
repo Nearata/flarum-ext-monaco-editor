@@ -1,6 +1,6 @@
 # Monaco Editor
 
-> A [Flarum](http://flarum.org) extension. Monaco Editor integration for Flarum
+> Monaco Editor integration
 
 ## Install
 
@@ -11,7 +11,7 @@ composer require nearata/flarum-ext-monaco-editor:"*"
 ## Update
 
 ```sh
-composer update nearata/flarum-ext-monaco-editor
+composer update nearata/flarum-ext-monaco-editor:"*"
 php flarum cache:clear
 ```
 
